@@ -21,4 +21,5 @@ const nomeLimpeza = (array) => {
     return newArray
 }
 
+
 console.log (nomeLimpeza(arrayLimpeza))

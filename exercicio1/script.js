@@ -6,24 +6,31 @@ const objeto = {
 };
 
 let caixaAlta = (objeto) => {
-  objeto.nome = objeto.nome.toUpperCase();
-  objeto.profissao = objeto.profissao.toUpperCase();
-  objeto.username = objeto.username.toUpperCase();
-  objeto.senha = objeto.senha.toUpperCase();
-  return objeto;
+  let object = {...objeto}
+    for (i in object){
+   object[i] = object[i].toUpperCase()
+  }
+  return object
 };
 
 
 const textoCorrido = (objeto) => {
-  return (
-    objeto.nome +
-    " " +
-    objeto.profissao +
-    " " +
-    objeto.username +
-    " " +
-    objeto.senha
-  );
+let texto = " "
+
+for (i in objeto){
+    texto += `${objeto[i]} `  
+}
+return texto.trim()
+
+    //   return (
+//     objeto.nome +
+//     " " +
+//     objeto.profissao +
+//     " " +
+//     objeto.username +
+//     " " +
+//     objeto.senha
+ 
 };
 
 const imprimir = (objeto, funcao) => {
